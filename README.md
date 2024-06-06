@@ -2,7 +2,7 @@
 
 ## 🧐 Sobre o projeto
 Este projeto foi desenvolvido durante as aulas da disciplina Desenvolvimento de 
-Aplicativos Moveis com os alunos do 3º do Curso de Desenvolvimento de Sistemas da Escola Profissional Salomão Alves de Moura.
+Aplicativos Moveis com os alunos do 3º ano do Curso de Desenvolvimento de Sistemas da Escola Profissional Salomão Alves de Moura.
 
 ## 👩‍💻 Tecnologias Usadas
 
