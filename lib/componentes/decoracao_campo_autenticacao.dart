@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import '../_comum/minhas_cores.dart';
 
-InputDecoration getAuthenticationDecoration(String label) {
+InputDecoration getAuthenticationDecoration(String label, {Icon? icon}) {
   return InputDecoration(
+    icon: icon,
     hintText: label,
     fillColor: Colors.white,
     filled: true,

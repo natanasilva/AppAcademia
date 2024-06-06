@@ -1,4 +1,5 @@
 import 'package:eu_fitness/_comum/minhas_cores.dart';
+import 'package:eu_fitness/componentes/decoracao_campo_autenticacao.dart';
 import 'package:flutter/material.dart';
 
 mostraModalInicio(BuildContext context) {
@@ -25,10 +26,10 @@ class ExercicioModal extends StatefulWidget {
 }
 
 class _ExercicioModalState extends State<ExercicioModal> {
-  TextEditingController nomeCtrl = TextEditingController();
-  TextEditingController treinoCtrl = TextEditingController();
-  TextEditingController anotacoesCtrl = TextEditingController();
-  TextEditingController sentindoCtrl = TextEditingController();
+  TextEditingController _nomeCtrl = TextEditingController();
+  TextEditingController _treinoCtrl = TextEditingController();
+  TextEditingController _anotacoesCtrl = TextEditingController();
+  TextEditingController _sentindoCtrl = TextEditingController();
 
   bool isCarregando = false;
 
@@ -42,27 +43,81 @@ class _ExercicioModalState extends State<ExercicioModal> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Row(
+            Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
-                const Text(
-                  "Adicionar Exercicio",
-                  style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
+                      "Adicionar Exercicio",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                    IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: Icon(
+                        Icons.close,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
-                IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  icon: Icon(
-                    Icons.close,
-                    color: Colors.white,
+                const Divider(),
+              ],
+            ),
+            Column(
+              children: [
+                const SizedBox(height: 16),
+                TextFormField(
+                  controller: _nomeCtrl,
+                  decoration: getAuthenticationDecoration(
+                    "Qual o nome do exercicio",
+                    icon: const Icon(
+                      Icons.abc,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                TextFormField(
+                  controller: _treinoCtrl,
+                  decoration: getAuthenticationDecoration(
+                    "Qual o nome do trieno",
+                    icon: const Icon(
+                      Icons.abc,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                TextFormField(
+                  controller: _anotacoesCtrl,
+                  decoration: getAuthenticationDecoration(
+                    "Qual as suas anotações",
+                    icon: const Icon(
+                      Icons.abc,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                TextFormField(
+                  controller: _sentindoCtrl,
+                  decoration: getAuthenticationDecoration(
+                    "O que você está sentindo",
+                    icon: const Icon(
+                      Icons.abc,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ],
             ),
-            const Column(),
             ElevatedButton(onPressed: () {}, child: Text("Criar Exercicio"))
           ],
         ),
