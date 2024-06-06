@@ -1,4 +1,4 @@
-package xyz.natanet.treinoacademia.app_academia
+package com.example.parcial
 
 import io.flutter.embedding.android.FlutterActivity
 

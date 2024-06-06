@@ -1,11 +1,11 @@
 {
-    "name": "app_academia",
-    "short_name": "app_academia",
+    "name": "parcial",
+    "short_name": "parcial",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Um aplicativo para controle de treinos na academia",
+    "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
