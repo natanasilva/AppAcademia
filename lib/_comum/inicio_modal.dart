@@ -103,6 +103,7 @@ class _ExercicioModalState extends State<ExercicioModal> {
                           color: Colors.white,
                         ),
                       ),
+                      maxLines: null,
                     ),
                     const SizedBox(height: 16),
                     TextFormField(
@@ -114,12 +115,24 @@ class _ExercicioModalState extends State<ExercicioModal> {
                           color: Colors.white,
                         ),
                       ),
+                      maxLines: null,
                     ),
                   ],
                 ),
               ],
             ),
-            ElevatedButton(onPressed: () {}, child: Text("Criar Exercicio"))
+            ElevatedButton(
+              onPressed: () {},
+              child: (isCarregando)
+                  ? const SizedBox(
+                      height: 16,
+                      width: 16,
+                      child: CircularProgressIndicator(
+                        color: MinhasCores.azulEscuro,
+                      ),
+                    )
+                  : const Text("Criar Exercício"),
+            ),
           ],
         ),
       ),
