@@ -4,13 +4,9 @@ import '../modelos/exercicio_modelo.dart';
 import '../modelos/sentimento_modelo.dart';
 
 class ExercicioTela extends StatelessWidget {
-  ExercicioTela({super.key});
+  final ExercicioModelo exercicioModelo;
+  ExercicioTela({super.key, required this.exercicioModelo});
 
-  final ExercicioModelo exercicioModelo = ExercicioModelo(
-      id: "EX001",
-      nome: "Remada Baixa Supinada",
-      treino: "Treino A",
-      comoFazer: "Segura a barra e puxa");
 
   final List<SentimentoModelo> listaSentimentos = [
     SentimentoModelo(

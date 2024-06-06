@@ -5,7 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 
 import 'firebase_options.dart';
 import 'telas/autencicacao_tela.dart';
-import 'telas/inicio._tela.dart';
+import 'telas/inicio_tela.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,7 +37,9 @@ class RoteadorTela extends StatelessWidget {
       stream: FirebaseAuth.instance.userChanges(),
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return InicioTela();
+          return InicioTela(
+            user: snapshot.data!,
+          );
         } else {
           return const AutenticacaoTela();
         }
