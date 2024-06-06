@@ -68,53 +68,54 @@ class _ExercicioModalState extends State<ExercicioModal> {
                   ],
                 ),
                 const Divider(),
-              ],
-            ),
-            Column(
-              children: [
-                const SizedBox(height: 16),
-                TextFormField(
-                  controller: _nomeCtrl,
-                  decoration: getAuthenticationDecoration(
-                    "Qual o nome do exercicio",
-                    icon: const Icon(
-                      Icons.abc,
-                      color: Colors.white,
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const SizedBox(height: 16),
+                    TextFormField(
+                      controller: _nomeCtrl,
+                      decoration: getAuthenticationDecoration(
+                        "Qual o nome do exercicio?",
+                        icon: const Icon(
+                          Icons.abc,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                const SizedBox(height: 16),
-                TextFormField(
-                  controller: _treinoCtrl,
-                  decoration: getAuthenticationDecoration(
-                    "Qual o nome do trieno",
-                    icon: const Icon(
-                      Icons.abc,
-                      color: Colors.white,
+                    const SizedBox(height: 16),
+                    TextFormField(
+                      controller: _treinoCtrl,
+                      decoration: getAuthenticationDecoration(
+                        "A qual treino pertence?",
+                        icon: const Icon(
+                          Icons.list_alt_rounded,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                const SizedBox(height: 16),
-                TextFormField(
-                  controller: _anotacoesCtrl,
-                  decoration: getAuthenticationDecoration(
-                    "Qual as suas anotações",
-                    icon: const Icon(
-                      Icons.abc,
-                      color: Colors.white,
+                    const SizedBox(height: 16),
+                    TextFormField(
+                      controller: _anotacoesCtrl,
+                      decoration: getAuthenticationDecoration(
+                        "Qual as suas anotações?",
+                        icon: const Icon(
+                          Icons.note_add_rounded,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                const SizedBox(height: 16),
-                TextFormField(
-                  controller: _sentindoCtrl,
-                  decoration: getAuthenticationDecoration(
-                    "O que você está sentindo",
-                    icon: const Icon(
-                      Icons.abc,
-                      color: Colors.white,
+                    const SizedBox(height: 16),
+                    TextFormField(
+                      controller: _sentindoCtrl,
+                      decoration: getAuthenticationDecoration(
+                        "O que você está sentindo?",
+                        icon: const Icon(
+                          Icons.emoji_emotions_rounded,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ],
             ),
