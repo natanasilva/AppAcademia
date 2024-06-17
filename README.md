@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # App Meus Exercícios 💪
 
 ## 🧐 Sobre o projeto
@@ -84,4 +83,3 @@ Sinta-se a vontade para mandar pull requests, será uma honra para mim! Você po
 
 ## 📜 License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/warleys14/S-Compras/blob/master/LICENSE) file for details.
->>>>>>> 839ee62a1c8c7ddf9612af609db813530cbf8592
