@@ -1,6 +1,9 @@
 import 'package:eu_fitness/_comum/minhas_cores.dart';
 import 'package:eu_fitness/componentes/decoracao_campo_autenticacao.dart';
+import 'package:eu_fitness/modelos/exercicio_modelo.dart';
+import 'package:eu_fitness/servicos/exercicio_servico.dart';
 import 'package:flutter/material.dart';
+import 'package:uuid/uuid.dart';
 
 mostraModalInicio(BuildContext context) {
   showModalBottomSheet(
@@ -32,6 +35,8 @@ class _ExercicioModalState extends State<ExercicioModal> {
   TextEditingController _sentindoCtrl = TextEditingController();
 
   bool isCarregando = false;
+
+  ExercicioServico _exercicioServico = ExercicioServico();
 
   @override
   Widget build(BuildContext context) {
@@ -122,7 +127,9 @@ class _ExercicioModalState extends State<ExercicioModal> {
               ],
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                enviarClicado();
+              },
               child: (isCarregando)
                   ? const SizedBox(
                       height: 16,
@@ -137,5 +144,24 @@ class _ExercicioModalState extends State<ExercicioModal> {
         ),
       ),
     );
+  }
+
+  enviarClicado() {
+    String nome = _nomeCtrl.text;
+    String treino = _treinoCtrl.text;
+    String anotacoes = _anotacoesCtrl.text;
+    String sentindo = _sentindoCtrl.text;
+
+    ExercicioModelo exercicio = ExercicioModelo(
+      id: const Uuid().v1(),
+      nome: nome,
+      treino: treino,
+      comoFazer: anotacoes,
+    );
+    _exercicioServico.adicionarExercicio(exercicio).then((value) {
+      setState(() {
+        isCarregando = false;
+      });
+    });
   }
 }

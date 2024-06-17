@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "parcial",
+            "name": "eu_fitness",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "parcial (profile mode)",
+            "name": "eu_fitness (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "parcial (release mode)",
+            "name": "eu_fitness (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
